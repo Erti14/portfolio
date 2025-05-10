@@ -5,7 +5,6 @@ import tailwind from "@tailwindcss/vite";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
-import webmanifest from "astro-webmanifest";
 import { defineConfig, envField } from "astro/config";
 import { expressiveCodeOptions } from "./src/site.config";
 import { siteConfig } from "./src/site.config";
@@ -21,10 +20,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 
-
-
-
-
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
@@ -38,37 +33,6 @@ export default defineConfig({
 		sitemap(),
 		mdx(),
 		robotsTxt(),
-		webmanifest({
-			// See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
-			name: siteConfig.title,
-			short_name: "Erti's Portfolio", // optional
-			description: siteConfig.description,
-			lang: siteConfig.lang,
-			icon: "/portfolio/icon.svg", // the source for generating favicon & icons
-			icons: [
-				{
-					src: "/portfolio/icon.svg",
-					sizes: "any",
-					type: "image/svg+xml",
-					purpose: "any"
-				},
-				{
-					src: "/portfolio/icon.svg",
-					sizes: "any",
-					type: "image/svg+xml",
-					purpose: "maskable"
-				}
-			],
-			start_url: "/portfolio/",
-			background_color: "#1d1f21",
-			theme_color: "#53C68C",
-			display: "standalone",
-			config: {
-				insertFaviconLinks: true,
-				insertThemeColorMeta: true,
-				insertManifestLink: true,
-			},
-		}),
 	],
 	markdown: {
 		rehypePlugins: [

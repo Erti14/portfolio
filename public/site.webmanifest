@@ -1,0 +1,15 @@
+{
+    "name": "Erti's Portfolio",
+    "short_name": "Erti's Portfolio",
+    "icons": [
+        {
+            "src": "/portfolio/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ],
+    "theme_color": "#53C68C",
+    "background_color": "#1d1f21",
+    "display": "standalone"
+} 
