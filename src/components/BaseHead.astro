@@ -19,11 +19,8 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <title>{siteTitle}</title>
 
 {/* Favicon */}
-<link rel="icon" type="image/svg+xml" href="/portfolio/icon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="/portfolio/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/portfolio/favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/portfolio/apple-touch-icon.png" />
-<link rel="manifest" href="/portfolio/site.webmanifest" />
+<link rel="icon" href="/portfolio/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/portfolio/favicon.ico" type="image/x-icon" />
 
 {/* Canonical URL */}
 <link href={canonicalURL} rel="canonical" />
