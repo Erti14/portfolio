@@ -6,7 +6,7 @@ publishDate: "2025-04-15T12:30:00Z"
 
 <div class="flex justify-center my-4">
     <video controls width="50%" style="max-width: 400px;">
-        <source src="/portfolio/src/content/public/wlans.mp4" type="video/mp4">
+        <source src="/public/wlans.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
