@@ -44,7 +44,7 @@ export default defineConfig({
 			short_name: "Erti's Portfolio", // optional
 			description: siteConfig.description,
 			lang: siteConfig.lang,
-			icon: "/portfolio/public/icon.svg", // the source for generating favicon & icons
+			icon: "/portfolio/icon.svg", // the source for generating favicon & icons
 			icons: [
 				{
 					src: "/portfolio/icons/apple-touch-icon.png",
