@@ -44,25 +44,25 @@ export default defineConfig({
 			short_name: "Erti's Portfolio", // optional
 			description: siteConfig.description,
 			lang: siteConfig.lang,
-			icon: "public/icon.svg", // the source for generating favicon & icons
+			icon: "/portfolio/public/icon.svg", // the source for generating favicon & icons
 			icons: [
 				{
-					src: "icons/apple-touch-icon.png",
+					src: "/portfolio/icons/apple-touch-icon.png",
 					sizes: "180x180",
 					type: "image/png",
 				},
 				{
-					src: "icons/icon-192.png",
+					src: "/portfolio/icons/icon-192.png",
 					sizes: "192x192",
 					type: "image/png",
 				},
 				{
-					src: "icons/icon-512.png",
+					src: "/portfolio/icons/icon-512.png",
 					sizes: "512x512",
 					type: "image/png",
 				},
 			],
-			start_url: "/",
+			start_url: "/portfolio/",
 			background_color: "#1d1f21",
 			theme_color: "#53C68C",
 			display: "standalone",
