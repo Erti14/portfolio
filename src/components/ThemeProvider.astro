@@ -1,0 +1,16 @@
+{/* Inlined to avoid FOUC. This is a parser blocking script. */}
+<script is:inline>
+	function setTheme() {
+		const root = document.documentElement;
+		root.setAttribute("data-theme", "dark");
+		if (typeof localStorage !== "undefined") {
+			localStorage.setItem("theme", "dark");
+		}
+	}
+
+	// initial setup
+	setTheme();
+
+	// View Transitions hook to restore theme
+	document.addEventListener("astro:after-swap", () => setTheme());
+</script>
