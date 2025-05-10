@@ -1,7 +1,7 @@
 ---
 title: How to Secure a Workplace Computer
 description: Take a look at the measures needed to secure your computer 
-publishDate: "2025-05-10T16:00:00Z"
+publishDate: "2025-05-10T14:00:00Z"
 ---
 
 
