@@ -4,7 +4,7 @@ description: one homelab to rule them all!
 publishDate: "2025-03-29T12:30:00Z"
 ---
 
-![logical-network.png](/public/thumbnail.png)
+![logical-network.png](/portfolio/thumbnail.png)
 
 Set up your honeypot in a cost-effective and efficient manner by transforming your Raspberry Pi into a vulnerable Samba file server. This will create an intentionally insecure environment designed to attract potential attackers. By mimicking a typical file-sharing setup with weak security configurations, you can effectively monitor and analyze attack patterns.<br><br><br><br><br>
 

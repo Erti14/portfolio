@@ -4,7 +4,7 @@ description: Catch Attackers by Tricking them.
 publishDate: "2025-04-26T16:00:00Z"
 ---
 
-![dashboard.png](/portfolio/src/content/public/email_alert.png)
+![dashboard.png](/portfolio/email_alert.png)
 *Figure 1: Email alert notification showing detected intrusion attempt*
 
 ## Introduction
@@ -283,7 +283,7 @@ opencanaryd --start --uid=nobody --gid=nogroup
 
 In my example it is: \\192.168.100.12
 
-![access_folder.png](/portfolio/src/content/public/access_folder.png)
+![access_folder.png](/portfolio/access_folder.png)
 *Figure 2: Accessing the shared folder*
 
 Access the Shared Folder.
@@ -291,7 +291,7 @@ Access the Shared Folder.
 2. Try to open or copy files.
 3. You should receive an email alert with the attack details.
 
-![email_alert.png](/portfolio/src/content/public/email_alert.png)
+![email_alert.png](/portfolio/email_alert.png)
 *Figure 3: Real-time email alerts for detected security threats*
 
 ## Step 8: Block Traffic from the Attacker
@@ -310,7 +310,7 @@ iptables -A INPUT -s "$ATTACKER_IP" -j DROP
 
 After this, access the shared folder again and you shoul receive the following message:
 
-![block.png](/portfolio/src/content/public/block_attacker.png)
+![block.png](/portfolio/block_attacker.png)
 *Figure 4: Automatic blocking of detected malicious IP addresses*
 
 ## Conclusion

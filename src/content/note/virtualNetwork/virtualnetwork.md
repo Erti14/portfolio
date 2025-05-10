@@ -4,7 +4,7 @@ description: one homelab to rule them all!
 publishDate: "2024-06-10T12:00:00Z"
 ---
 
-![network.png](/portfolio/src/content/public/thumbnail_virtual_network.jpg)
+![network.png](/portfolio/thumbnail_virtual_network.jpg)
 
 This project involved setting up a virtualized network environment using Proxmox, Mikrotik routers, and Windows Server infrastructure. The objective was to simulate a complete network topology with proper routing, domain services, and VPN connectivity between two sites.<br><br><br><br><br>
 
@@ -15,7 +15,7 @@ The topology was recreated in Proxmox based on provided reference materials. Vir
 
 Access permissions were set on the VMs to restrict unauthorized access by other students. This was done by adjusting the ACLs within the Proxmox interface.
 
-![topology.png](/portfolio/src/content/public/virtual_topology.png)
+![topology.png](/portfolio/virtual_topology.png)
 *Figure 2: Detailed network topology diagram illustrating the network architecture*
 
 
