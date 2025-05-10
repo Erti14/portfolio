@@ -47,29 +47,26 @@ export default defineConfig({
 			icon: "/portfolio/icon.svg", // the source for generating favicon & icons
 			icons: [
 				{
-					src: "/portfolio/icons/apple-touch-icon.png",
-					sizes: "180x180",
-					type: "image/png",
+					src: "/portfolio/icon.svg",
+					sizes: "any",
+					type: "image/svg+xml",
+					purpose: "any"
 				},
 				{
-					src: "/portfolio/icons/icon-192.png",
-					sizes: "192x192",
-					type: "image/png",
-				},
-				{
-					src: "/portfolio/icons/icon-512.png",
-					sizes: "512x512",
-					type: "image/png",
-				},
+					src: "/portfolio/icon.svg",
+					sizes: "any",
+					type: "image/svg+xml",
+					purpose: "maskable"
+				}
 			],
 			start_url: "/portfolio/",
 			background_color: "#1d1f21",
 			theme_color: "#53C68C",
 			display: "standalone",
 			config: {
-				insertFaviconLinks: false,
-				insertThemeColorMeta: false,
-				insertManifestLink: false,
+				insertFaviconLinks: true,
+				insertThemeColorMeta: true,
+				insertManifestLink: true,
 			},
 		}),
 	],
