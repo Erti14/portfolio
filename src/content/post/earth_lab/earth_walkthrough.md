@@ -46,7 +46,7 @@ As we can see the vulnerable machine has the ip address 10.38.1.113. The machine
 The easiest attack we can do is a ssh brute force attack. We can use **hydra** to implement this attack. But since we do not know nor the username or password it will take a lot of time and ressources to execute the full attack and probably the attack will be unsuccesful. However this is the command if you want to try it out: 
 
 ```bash
-hydra -l admin -P /usr/share/wordlists/rockyou.txt  ssh://10.38.1.113 -t 4
+hydra -l root -P /usr/share/wordlists/rockyou.txt  ssh://10.38.1.113 -t 4
 ```
 
 
