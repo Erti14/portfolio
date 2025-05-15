@@ -50,7 +50,7 @@ hydra -l root -P /usr/share/wordlists/rockyou.txt  ssh://10.38.1.113 -t 4
 ```
 
 
-### Intense Scan
+## Intense Scan
 To get more details on the services running on the machine we will perform an intense scan. 
 
 ```bash
