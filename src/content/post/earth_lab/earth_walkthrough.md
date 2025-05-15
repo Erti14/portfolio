@@ -26,7 +26,7 @@ For this lab we will use Oracle VirtualBox. We are going to use a Kali Linux mac
 Now so that our machines have ip addresses we need to create a **DHCP server**. Oracle allows us to create a DHCP server. What we need to do now is to open command prompt and we are going to enter the following command:
 
 ```shell
-vboxmanage dhcpserver add --netowork=intnet --server-ip=10.38.1.1 --lower-ip=10.38.1.110 --upper-ip=10.38.1.120 --netmask=255.255.255.0 --enable 
+vboxmanage dhcpserver add --network=intnet --server-ip=10.38.1.1 --lower-ip=10.38.1.110 --upper-ip=10.38.1.120 --netmask=255.255.255.0 --enable 
 ```
 
 ## Reconnaissance
@@ -40,7 +40,7 @@ The nmap results are the following:
 ![Nmap Results](/portfolio/nmap_results.png)
 *Figure 2: Nmap Results*
 
-As we can see the vulnerable machine has the ip address 10.1.38.113. The machine has **ssh, http and https** running.
+As we can see the vulnerable machine has the ip address 10.38.1.113. The machine has **ssh, http and https** running.
 
 ## SSH Brute Force
 The easiest attack we can do is a ssh brute force attack. We can use **hydra** to implement this attack. But since we do not know nor the username or password it will take a lot of time and ressources to execute the full attack and probably the attack will be unsuccesful. However this is the command if you want to try it out: 
@@ -71,17 +71,17 @@ nano /etc/host.conf
 We are going to add the following entry: 
 
 ```bash
-10.1.38.113     terratest.earth.local earth.local
+10.38.1.113     terratest.earth.local earth.local
 ```
 
 ## Testing the web server
 As we can see from the services running **(http, https)** the vulnerable machine is a web server. If we open a browser and enter the following link
 : http://terratest.earth.local a page is shown. The first thing we do when testing a website we find the subdomains. 
 
-### Finding Subdomains
+### Directory Enumeration
 
 #### earth.local
-To find the subdomains we can use **gobuster**. We can enter the following command to find the subdomains:
+To enumerate directories on the web server, we can use **gobuster**. This helps in identifying hidden directories that might not be immediately visible. We can enter the following command to find these:
 
 ```bash
 gobuster dir -u https://earth.local -w /usr/share/wordlists/dirb/common.txt -k
