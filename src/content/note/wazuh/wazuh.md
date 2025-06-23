@@ -25,9 +25,9 @@ In this project the follwoing is used:
 
 - Agents:
 
- - - Windows 11 (physical)
+  - Windows 11 (physical)
 
- - - Ubuntu Linux (VM)
+  - Ubuntu Linux (VM)
 
 - Network devices: MikroTik router
 
@@ -62,3 +62,32 @@ To add agents via CLI the *manage_agents* script located at */var/ossec/bin/* is
 
 ![topology.png](/portfolio/agents.png)
 *Figure 2: Agents on Wazuh Dashboard*
+
+
+## Vulnerability Detection
+This feature is activated by default on all agents. Upon clicking on a agent a dashboard is displayed. In this dashboard there’s the Vulnerability Detection section. This is an example on an agent. Most of the vulnerabilities come from old versions of programmes hence it is advisable to either remove those packages or update them to their latest versions. 
+
+
+![topology.png](/portfolio/vulnerability.png)
+*Figure 3: Vulnerability Detection on agent*
+
+
+## File Integrity Monitoring 
+File Integrity Monitoring allows to track critical system files or configs being changed. I enabled this on the Windows machine by editing the C:\Program Files (x86)\ossec-agent\ossec.conf file. To edit these files you must be an Administrator/Root depending on the system you’re working with. Sometimes this function is already activated but if it isn’t make sure that these lines are persistent: 
+
+```html
+<syscheck>
+    <disabled>no</disabled>
+```
+
+
+Afterwards the directories need to be specified.  That can be done with the following line: 
+```html
+<directories><FILEPATH_OF_MONITORED_FILE></directories>
+```
+
+In my case the FIM was already enabled, hence I decided to test it. Usually the system check is executed every 12 hours but to test it I change this to 60 seconds in order to see some quick results. Then I added a random host in the *hosts* file to notice a change. 
+
+![topology.png](/portfolio/integrity_monitoring.png)
+*Figure 4: File Integrity Monitoring Triggered*
+
