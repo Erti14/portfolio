@@ -91,3 +91,26 @@ In my case the FIM was already enabled, hence I decided to test it. Usually the 
 ![topology.png](/portfolio/integrity_monitoring.png)
 *Figure 4: File Integrity Monitoring Triggered*
 
+
+## Threat Hunting
+For this part I had a Raspberry Pi Agent which was used as a victim machine. I did some activity on the agent to trigger some events. Firstly I loged in via ssh and got the following event: 
+
+
+![topology.png](/portfolio/ssh_login.png)
+*Figure 5: SSH Login Event*
+
+Then I added a new user under a new group: 
+
+![topology.png](/portfolio/newuser.png)
+*Figure 6: User Creation Event*
+
+An event was triggered after adding a package as well: 
+![topology.png](/portfolio/package.png)
+*Figure 7: Adding a new package*
+
+
+### SSH Bruteforce
+To trigger higher level alerts I executed an SSH Brute Force attack from my kali linux machine to the agent. After doing so the threat hunting section of the agent looked like this: 
+
+![topology.png](/portfolio/bruteforce.png)
+*Figure 7: Brute Force Attack*
