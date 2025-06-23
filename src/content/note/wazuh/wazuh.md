@@ -4,7 +4,7 @@ description: Secure your network for free!
 publishDate: "2025-06-24T12:00:00Z"
 ---
 
-![network.png](/portfolio/wazuh_thumbnail.jpeg)
+![network.png](/portfolio/wazuh_thumbnail.png)
 
 This project demonstrates the deployment, configuration, and use of Wazuh as a SIEM solution. The environment includes both physical and virtual machines, integrating multiple tools and data sources to provide advanced threat detection, vulnerability management, file integrity monitoring, and automated incident response.<br><br><br><br><br>
 
@@ -17,7 +17,7 @@ Wazuh is a powerful open-source security platform designed for threat detection,
 
 In this project both virtual and physical machines were used. A network in the 192.168.88.0/24 subnet was created with the Mikrotik Router acting as a DHCP Server. The Wazuh Manager has a static ip assigned to it so that the connection between agents and the manager can be reestablished when lost.
 
-![topology.png](/portfolio/topology.svg)
+![topology.png](/portfolio/topology.drawio.svg)
 *Figure 1: Detailed network topology diagram illustrating the network architecture*
 
 In this project the follwoing is used: 
