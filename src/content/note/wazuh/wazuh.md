@@ -113,4 +113,62 @@ An event was triggered after adding a package as well:
 To trigger higher level alerts I executed an SSH Brute Force attack from my kali linux machine to the agent. After doing so the threat hunting section of the agent looked like this: 
 
 ![topology.png](/portfolio/bruteforce.png)
-*Figure 7: Brute Force Attack*
+*Figure 8: Brute Force Attack*
+
+
+### Custom Rules to detect Reverse Shell
+I ran some basic reverse shell attacks against the machine but no event was triggered. To detect these types of attacks I created some custom rules. To do so I edited the */var/ossec/etc/rules/local_rules.xml* file and added the following code snippet. 
+
+```html
+<group name="reverse_shell,custom,">
+  <rule id="100010" level="12">
+    <location>command_ps-list</location>
+    <match>bash -i</match>
+    <description>Reverse shell detected using bash -i</description>
+  </rule>
+
+  <rule id="100011" level="12">
+    <location>command_ps-list</location>
+    <match>nc -e</match>
+    <description>Reverse shell detected using nc -e</description>
+  </rule>
+
+  <rule id="100012" level="12">
+    <location>command_ps-list</location>
+    <match>sh -i</match>
+    <description>Reverse shell detected using sh -i</description>
+  </rule>
+<rule id="100013" level="12">
+    <location>command_ps-list</location>
+    <match>python.*socket</match>
+    <description>Reverse shell using Python socket</description>
+    <regex>yes</regex>
+  </rule>
+</group>
+```
+
+After applying these rules I then tested it again and the event was triggered. 
+
+![topology.png](/portfolio/reverseshell2.png)
+*Figure 8: Reverse Shell Event*
+
+
+### Suricata (IDS/IPS) Integration
+To enhance network-based threat detection, I integrated Suricata IDS with a Wazuh agent running on an Ubuntu system. Suricata inspects incoming and outgoing traffic in real time and generates alerts for suspicious activity such as port scans, malware communications, and brute-force attempts. These alerts are forwarded as logs to the Wazuh agent, which then parses and sends them to the Wazuh Manager. After doing so I ran an nmap scan on the ubuntu machine and got the following logs: 
+
+
+![topology.png](/portfolio/nmaplogs.png)
+*Figure 8: Nmap Scan Events*
+
+
+### Mikrotik Logs
+As part of extending visibility into network infrastructure, I integrated MikroTik router logs with the Wazuh SIEM. By enabling the remote logging feature on the MikroTik router, I configured it to forward logs (via Syslog over UDP 514) to the Wazuh Manager.
+These logs include critical network events such as:
+- Login attempts (successful and failed)
+- DHCP leases
+- Firewall actions
+- Interface state changes
+Wazuh parses these logs using custom decoders, allowing them to be categorized and correlated alongside agent and IDS data. This is an example of a log after logging in to the mikrotik router. 
+
+![topology.png](/portfolio/mikrotik.png)
+*Figure 9: Mikrotik Log*
