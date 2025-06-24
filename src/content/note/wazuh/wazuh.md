@@ -1,12 +1,12 @@
 ---
 title: Wazuh Security Monitoring & Incident Response Project
 description: Secure your network for free!
-publishDate: "2025-06-24T12:00:00Z"
+publishDate: "2025-06-24T16:00:00Z"
 ---
 
 ![network.png](/portfolio/wazuh_thumbnail.png)
 
-This project demonstrates the deployment, configuration, and use of Wazuh as a SIEM solution. The environment includes both physical and virtual machines, integrating multiple tools and data sources to provide advanced threat detection, vulnerability management, file integrity monitoring, and automated incident response.
+This project demonstrates the deployment, configuration, and use of Wazuh as a SIEM solution. The environment includes both physical and virtual machines, integrating multiple tools and data sources to provide advanced threat detection, vulnerability management, file integrity monitoring, and automated incident response. The architecture integrates multiple tools, data sources, and defensive techniques to simulate a realistic, security monitoring setup. <br><br><br><br><br>
 
 ## Table of Contents
 - [What is Wazuh?](#what-is-wazuh)
@@ -24,6 +24,7 @@ This project demonstrates the deployment, configuration, and use of Wazuh as a S
 - [Active Response](#active-response)
   - [Detecting and Blocking SSH Brute Force Attack](#detecting-and-blocking-ssh-brute-force-attack)
   - [Detecting and Removing Malware with VirusTotal](#detecting-and-removing-malware-with-virustotal)
+- [References](#references)
 
 
 ## What is Wazuh?
@@ -223,3 +224,12 @@ How It Works:
 I ran a test using a file called *eicar*, which triggered this response.
 ![topology.png](/portfolio/malware.png)
 *Figure 13: Malware detected and removed*
+
+## References
+
+1. [Wazuh Server Installation Assistant Guide](https://documentation.wazuh.com/current/installation-guide/wazuh-server/installation-assistant.html)
+2. [Monitoring Network Devices with Wazuh](https://wazuh.com/blog/monitoring-network-devices/)
+3. [Configuring Email Alerts in Wazuh](https://documentation.wazuh.com/current/user-manual/manager/alert-management.html#configuring-email-alerts)
+4. [Blocking SSH Brute-Force Attacks with Active Response](https://documentation.wazuh.com/current/user-manual/capabilities/active-response/ar-use-cases/blocking-ssh-brute-force.html)
+5. [Integrate Suricata IDS with Wazuh](https://documentation.wazuh.com/current/proof-of-concept-guide/integrate-network-ids-suricata.html)
+6. [Default Active Response Scripts in Wazuh](https://documentation.wazuh.com/current/user-manual/capabilities/active-response/default-active-response-scripts.html)
