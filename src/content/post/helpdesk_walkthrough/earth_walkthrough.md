@@ -361,4 +361,4 @@ flag{ticket_approved_by_thedesk}
 
 ## Conclusion
 
-Helpdesk demonstrates how chained misconfigurations — LFI, exp
+Helpdesk demonstrates how chained misconfigurations — LFI, exposed credentials, a world-writable socket, and an overly permissive sudo rule — can lead to full compromise. Proper coding practices, secure socket permissions, and restrictive sudo policies can prevent similar attacks.
