@@ -361,4 +361,4 @@ flag{ticket_approved_by_thedesk}
 
 ## Conclusion
 
-Helpdesk demonstrates how chained misconfigurations — LFI, expo
+Helpdesk demonstrates how chained misconfigurations — LFI, exp
