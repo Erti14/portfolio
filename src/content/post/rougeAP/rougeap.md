@@ -4,16 +4,19 @@ description: Hands-on exploration of creating a Rogue Access Point using a perso
 publishDate: "2026-01-05T20:00:00Z"
 ---
 
+
+
+# Turn Your Personal Hotspot into a Powerful Rogue AP with Captive Portal
+
+**Practical walkthrough of building an Evil Twin Rogue AP using a mobile hotspot and airgeddon.**
+
+
 <video autoplay loop muted playsinline controls>
   <source src="/portfolio/rogueap.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 *Video 1: Evil Twin Rogue AP serving a fake captive portal*
-
-# Turn Your Personal Hotspot into a Powerful Rogue AP with Captive Portal
-
-**Practical walkthrough of building an Evil Twin Rogue AP using a mobile hotspot and airgeddon.**
 
 ---
 
