@@ -11,10 +11,12 @@ publishDate: "2026-01-05T20:00:00Z"
 **Practical walkthrough of building an Evil Twin Rogue AP using a mobile hotspot and airgeddon.**
 
 
-<video autoplay loop muted playsinline controls>
-  <source src="/portfolio/rogueap.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div class="flex justify-center my-4">
+    <video controls width="50%" style="max-width: 400px;">
+        <source src="/portfolio/rogueap.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
 *Video 1: Evil Twin Rogue AP serving a fake captive portal*
 
