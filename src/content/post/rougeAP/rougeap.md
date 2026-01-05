@@ -13,7 +13,7 @@ publishDate: "2026-01-05T20:00:00Z"
 
 <div class="flex justify-center my-4">
     <video controls width="50%" style="max-width: 400px;">
-        <source src="/portfolio/rogueap.mp4" type="video/mp4">
+        <source src="/portfolio/rougeap.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
