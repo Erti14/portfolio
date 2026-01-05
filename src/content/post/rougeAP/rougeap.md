@@ -1,5 +1,5 @@
 ---
-title: Turn Your Personal Hotspot into a Powerful Rogue AP with Captive Portal
+title: Turn Your Personal Hotspot into a Powerful Rogue AP
 description: Hands-on exploration of creating a Rogue Access Point using a personal hotspot and airgeddon with a custom captive portal.
 publishDate: "2026-01-05T20:00:00Z"
 ---
