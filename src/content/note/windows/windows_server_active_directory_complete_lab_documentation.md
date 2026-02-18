@@ -1,7 +1,7 @@
 ---
 title: Windows Server Infrastructure & Active Directory Project
-description: Design, deployment, and administration of an enterprise-style Windows Server environment with Active Directory, DNS, DHCP, GPOs, and security best practices.
-publishDate: "2025-06-24T16:00:00Z"
+description: Design, deployment, and administration of an enterprise-style Windows Server environment
+publishDate: "2024-06-24T16:00:00Z"
 ---
 
 ![network.png](/portfolio/windows_ad_thumbnail.png)
@@ -13,17 +13,19 @@ The architecture follows real-world IT best practices such as **Least Privilege*
 The goal of this project was to simulate a **real corporate Windows domain** and validate both operational and security-focused administration workflows.  
 <br><br><br><br><br>
 
+
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Environment & Network Architecture](#environment--network-architecture)
-- [Core Infrastructure Deployment](#core-infrastructure-deployment)
-  - [Server & Client Provisioning](#server--client-provisioning)
+- [Environment & Network Design](#environment--network-design)
+  - [Virtualization & Network](#virtualization--network)
+  - [Systems Overview](#systems-overview)
+- [Core Infrastructure](#core-infrastructure)
+  - [System Installation & Networking](#system-installation--networking)
   - [DNS Architecture & Name Resolution](#dns-architecture--name-resolution)
   - [Active Directory Domain Design](#active-directory-domain-design)
   - [Remote Administration & Management](#remote-administration--management)
 - [Identity & Access Management](#identity--access-management)
   - [Group Design & Least Privilege](#group-design--least-privilege)
-  - [Delegation of Administrative Rights](#delegation-of-administrative-rights)
 - [File Services & Access Control](#file-services--access-control)
   - [NTFS & Share Permissions](#ntfs--share-permissions)
   - [Advanced Ownership & Inheritance Scenarios](#advanced-ownership--inheritance-scenarios)
@@ -35,9 +37,8 @@ The goal of this project was to simulate a **real corporate Windows domain** and
 - [Enterprise Features & Resilience](#enterprise-features--resilience)
   - [Additional Domain Controllers & Redundancy](#additional-domain-controllers--redundancy)
   - [Monitoring, Recovery & AD Maintenance](#monitoring-recovery--ad-maintenance)
-- [Advanced Access Control](#advanced-access-control)
-  - [Dynamic Access Control (DAC)](#dynamic-access-control-dac)
 - [Project Summary & Key Learnings](#project-summary--key-learnings)
+
 
 
 
