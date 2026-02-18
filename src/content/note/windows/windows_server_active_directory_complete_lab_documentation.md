@@ -6,13 +6,10 @@ publishDate: "2024-06-24T16:00:00Z"
 
 ![network.png](/portfolio/windows_ad_thumbnail.png)
 
-This project demonstrates the **design, implementation, and administration of a full enterprise-style Windows Server infrastructure**.  
-The environment was built from scratch in a virtualized setup and includes **Active Directory**, **DNS**, **DHCP**, **file and print services**, **Group Policy Objects (GPOs)**, **advanced permission models**, and **high-availability concepts**.
-
-The architecture follows real-world IT best practices such as **Least Privilege**, **I-G-DL-P group design**, **centralized administration**, **redundancy**, and **secure delegation of administrative rights**.  
-The goal of this project was to simulate a **real corporate Windows domain** and validate both operational and security-focused administration workflows.  
-<br><br><br><br><br>
-
+This project demonstrates the design, implementation, and administration of a full enterprise-style Windows Server infrastructure.  
+The environment was built from scratch in a virtualized setup and includes Active Directory, DNS, DHCP, file and print services, Group Policy Objects (GPOs), advanced permission models, and high-availability concepts.
+ 
+<br><br><br>
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -74,7 +71,7 @@ The Domain Controller (DC1em) has **two network interfaces**:
 
 NAT was enabled on the bridged interface so all internal machines could access the internet.
 
-![topology.png](/portfolio/windows_topology)
+![topology.png](/portfolio/windows_topology.png)
 *Figure 1: Detailed network topology diagram illustrating the network architecture*
 
 ### Systems Overview
@@ -110,7 +107,6 @@ Each system received:
 
 ---
 
----
 
 ## DNS Architecture & Name Resolution
 
